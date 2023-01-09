@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {COURSES} from '../db-data';
 
 @Component({
@@ -7,6 +7,9 @@ import {COURSES} from '../db-data';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  @Input()
+  title: string;
 
   coreCourse = COURSES[0];
   rxjsCourse = COURSES[1];
